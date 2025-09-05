@@ -26,16 +26,3 @@ body{
     border-radius: 7px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.goal{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.Aboutme{
-    text-align: center;
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    width: 100%;
-    
-}

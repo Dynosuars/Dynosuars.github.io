@@ -1,0 +1,45 @@
+.goal{
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.goal-text{
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+    display: inline;
+}
+.Aboutme{
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.interest{
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.interest p{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: fit-content;
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.special{
+    display: flex;
+}
+
+@keyframe colorchange{
+    from{
+        background-color: #000;
+    }to{
+        background-color: #5599ff;
+    }
+}
