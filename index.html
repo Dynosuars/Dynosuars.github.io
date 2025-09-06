@@ -6,6 +6,8 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <link href="styles/header.css" rel="stylesheet" type="text/css">
     <link href="styles/content.css" rel="stylesheet" type="text/css">
+    <title>Alexander's GitHub portfolio!</title>
+    <link href="images/favicon.png" type="image/x-icon" rel="icon">
 </head>
 <body>
     <div class="header">
@@ -19,11 +21,51 @@
             <h2 class="Aboutme"> About Me! </h2>
             <div class="goal">
                 <h2 class="goal-header">My Goal:</h2>
-                <p class="goal-text">Master everything</p><p> c++ </p><p class="goal-text">provides!</p>
+                <p class="goal-text">Develop a unix based operating system using<p class="goal-text animated-blue">C</p>and<p class="goal-text animated-blue">C++</p><p class="goal-text"></p></p>
             </div>
             <div class="interest">
                 <h2>Interest: </h2>
                 <p>I love creating application/softwares for me and my friends to use whether its for entertainment or productivity.</p>
+            </div>
+            <div class="github-link">
+                <h3 class="github-link-title">Check out my Github page!</h3>
+                <a href="https://github.com/Hahalxl" class="github-link-link">
+                    <button class="link-button" id="github-btn">
+                        <img src="images/whitegithub.png" class="github-link-logo" id="giticon">
+                        <p class="link-button-text">Click here to redirect to Github!</p>
+                    </button>
+                </a>
+                <script>
+                    const imgbtn = document.getElementById("github-btn");
+                    let img = document.getElementById("giticon");
+
+                    let old = "images\\whitegithub.png";
+                    let news = "images\\gitlogo.png";
+                    let timer;
+
+                    imgbtn.addEventListener("mouseenter", () =>{
+                        console.log(img.src);
+                        timer = setTimeout(() => {
+                            img.style.opacity = 0; // fade out
+                            setTimeout(() => {
+                                img.src = news; // swap image
+                                img.style.opacity = 1; 
+                            }, 500);
+                            });
+                        });
+
+                    imgbtn.addEventListener("mouseleave", () =>{
+                        clearTimeout(timer);
+                        img.style.opacity = 0;
+                        setTimeout(() => {
+                        img.src = old;
+                        img.style.opacity = 1;
+                            }, 500);
+
+                    });
+                            
+
+                </script>
             </div>
         </div>
     </div>

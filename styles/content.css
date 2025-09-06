@@ -32,14 +32,86 @@
     font-size: 24px;
     font-family: 'Courier New', Courier, monospace;
 }
-.special{
+
+.animated-blue{
+    animation-name: animation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.github-link-title{
+    text-align: center;
+    display: block;
+    font-size: large;
+    font-family:'Courier New', Courier, monospace;
+
+}
+.link-button img{
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.link-button img:hover{
+    height:50px;
+    width:50px;
+}
+.link-button{
+    height: 100%;
+    width: fit-content;
     display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #14191e;
+    padding: 5px;
+    border-radius: 40px;
+    transition: background-color 2s ease-out;
+    color:#fff;
+}
+.github-link-link{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+}
+.link-button-text{
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: large;
+    padding-right: 5px;
+    font-family:'Times New Roman', Times, serif;
 }
 
-@keyframe colorchange{
-    from{
-        background-color: #000;
-    }to{
-        background-color: #5599ff;
+.link-button:hover{
+    background-color: #fff;
+    color:#000;
+    scale: 1.1;
+    transition: all 2s ease;
+}
+
+@keyframes animation {
+    0%{
+        color: #000;
+    }
+    20% {
+        color: rgb(0, 9, 92);
+        font-weight: 200;
+    }
+    40% {
+        color: #000b72;
+        font-weight: 300;
+    }
+    60% {
+        color: #0315bd;
+        font-weight: 400;
+    }
+    80% {
+        color: #0017e4;
+        font-weight: 600;
+    }
+    100% {
+        color: #3c50fd;
+        font-weight: 800;
     }
 }
