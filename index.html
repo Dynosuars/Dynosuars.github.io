@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <link href="styles/header.css" rel="stylesheet" type="text/css">
-    <link href="styles/content.css" rel="stylesheet" type="text/css">
+    <link href="styles/content.css" rel="stylesheet" type="text/css">\
+    <link href="styles/contribution.css" rel="stylesheet" type="text/css">
     <title>Alexander's GitHub portfolio!</title>
+    <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
+
     <link href="images/favicon.png" type="image/x-icon" rel="icon">
 </head>
 <body>
@@ -25,7 +28,7 @@
             </div>
             <div class="interest">
                 <h2>Interest: </h2>
-                <p>I love creating application/softwares for me and my friends to use whether its for entertainment or productivity.</p>
+                <p>I love creating application/softwares for me and my friends to use whether its for entertainment or productivity. Overall, I will create random projects just to challenge myself and provide services to my friends and school</p>
             </div>
             <div class="github-link">
                 <h3 class="github-link-title">Check out my Github page!</h3>
@@ -44,13 +47,12 @@
                     let timer;
 
                     imgbtn.addEventListener("mouseenter", () =>{
-                        console.log(img.src);
                         timer = setTimeout(() => {
-                            img.style.opacity = 0; // fade out
+                            img.style.opacity = 0; 
                             setTimeout(() => {
-                                img.src = news; // swap image
                                 img.style.opacity = 1; 
-                            }, 500);
+                            }, 100);
+                            img.src = news; 
                             });
                         });
 
@@ -58,15 +60,33 @@
                         clearTimeout(timer);
                         img.style.opacity = 0;
                         setTimeout(() => {
-                        img.src = old;
                         img.style.opacity = 1;
-                            }, 500);
+                            }, 100);
+                        img.src = old;
 
                     });
                             
 
                 </script>
             </div>
+        </div>
+        <div class="Contributions">
+            <h2 id="auto type"></h2>
+            <div class="post">
+
+            </div>
+            <script src="Scripts/autotype.js">
+                document.addEventListener("DOMContentLoaded", (event) =>{
+                    const content = "Check out my work!";
+                    let target = document.getElementById("auto type");
+                    let index = 0;
+                    while(content[index]){
+                        target.innerHTML += content.charAt(index);
+                        setTimeout(target, delay);
+                        index++;
+                    }
+                });
+            </script>
         </div>
     </div>
 </body>

@@ -33,7 +33,7 @@
     font-family: 'Courier New', Courier, monospace;
 }
 
-.animated-blue{
+.animated-blue:hover{
     animation-name: animation;
     animation-duration: 2s;
     animation-iteration-count: infinite;
