@@ -2,15 +2,13 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <title>Alexander's GitHub portfolio!</title>
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <link href="styles/header.css" rel="stylesheet" type="text/css">
-    <link href="styles/content.css" rel="stylesheet" type="text/css">\
+    <link href="styles/content.css" rel="stylesheet" type="text/css">
     <link href="styles/contribution.css" rel="stylesheet" type="text/css">
     <link href="images/favicon.png" type="image/x-icon" rel="icon">
-    <title>Alexander's GitHub portfolio!</title>
     <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
-
-    <link href="images/favicon.png" type="image/x-icon" rel="icon">
 </head>
 <body>
     <div class="header">
@@ -71,23 +69,20 @@
             </div>
         </div>
         <div class="Contributions">
-            <h2 id="auto type"></h2>
-            <div class="post">
-
+            <div class="Contributions-header">
+                <h2 class="Contribution-header-content">Project I have participated</h2>
             </div>
-            <script src="Scripts/autotype.js">
-                document.addEventListener("DOMContentLoaded", (event) =>{
-                    const content = "Check out my work!";
-                    let target = document.getElementById("auto type");
-                    let index = 0;
-                    while(content[index]){
-                        target.innerHTML += content.charAt(index);
-                        setTimeout(target, delay);
-                        index++;
-                    }
-                });
-            </script>
+            <div class="projects">
+                <div class="post">
+                    <p style="font-size: larger;font-weight: 600;text-align: center;">Bad Apple created using Pygame</p>
+                    <iframe class="post-video" src="https://www.youtube.com/embed/81mEMX0Xs5s?si=3e-aWBZo2Bgcd2eh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="post">
+                        
+                </div>
+            </div>
         </div>
+
     </div>
 </body>
 </html>
