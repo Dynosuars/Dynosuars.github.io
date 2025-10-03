@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
-    <title>Alexander's GitHub portfolio!</title>
+    <title>Alexander' s GitHub portfolio!</title>
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <link href="styles/header.css" rel="stylesheet" type="text/css">
     <link href="styles/content.css" rel="stylesheet" type="text/css">
@@ -10,6 +11,7 @@
     <link href="images/favicon.png" type="image/x-icon" rel="icon">
     <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <div class="header">
         <div class="header-title">
@@ -22,11 +24,16 @@
             <h2 class="Aboutme"> About Me! </h2>
             <div class="goal">
                 <h2 class="goal-header">My Goal:</h2>
-                <p class="goal-text">Develop a unix based operating system using<p class="goal-text animated-blue">C</p>and<p class="goal-text animated-blue">C++</p><p class="goal-text"></p></p>
+                <p class="goal-text">Develop a unix based operating system using
+                <p class="goal-text animated-blue">C</p>and<p class="goal-text animated-blue">C++</p>
+                <p class="goal-text"></p>
+                </p>
             </div>
             <div class="interest">
                 <h2>Interest: </h2>
-                <p>I love creating application/softwares for me and my friends to use whether its for entertainment or productivity. Overall, I will create random projects just to challenge myself and provide services to my friends and school</p>
+                <p>I love creating application/softwares for me and my friends to use whether its for entertainment or
+                    productivity. Overall, I will create random projects just to challenge myself and provide services
+                    to my friends and school</p>
             </div>
             <div class="github-link">
                 <h3 class="github-link-title">Check out my Github page!</h3>
@@ -44,26 +51,26 @@
                     let news = "images\\gitlogo.png";
                     let timer;
 
-                    imgbtn.addEventListener("mouseenter", () =>{
+                    imgbtn.addEventListener("mouseenter", () => {
                         timer = setTimeout(() => {
-                            img.style.opacity = 0; 
+                            img.style.opacity = 0;
                             setTimeout(() => {
-                                img.style.opacity = 1; 
+                                img.style.opacity = 1;
                             }, 100);
-                            img.src = news; 
-                            });
+                            img.src = news;
                         });
+                    });
 
-                    imgbtn.addEventListener("mouseleave", () =>{
+                    imgbtn.addEventListener("mouseleave", () => {
                         clearTimeout(timer);
                         img.style.opacity = 0;
                         setTimeout(() => {
-                        img.style.opacity = 1;
-                            }, 100);
+                            img.style.opacity = 1;
+                        }, 100);
                         img.src = old;
 
                     });
-                            
+
 
                 </script>
             </div>
@@ -73,16 +80,30 @@
                 <h2 class="Contribution-header-content">Project I have participated</h2>
             </div>
             <div class="projects">
-                <div class="post">
-                    <p style="font-size: larger;font-weight: 600;text-align: center;">Bad Apple created using Pygame</p>
-                    <iframe class="post-video" src="https://www.youtube.com/embed/81mEMX0Xs5s?si=3e-aWBZo2Bgcd2eh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="rows">
+                    <div class="post">
+                        <p class="post-title" style="font-size: larger;font-weight: 600;text-align: center;">Lunar New Year Bad Apple</p>
+                        <p style="color:#ffd343;font-weight: 700; text-shadow: 2px 2px 2px #4B8BBE; text-align: center;">Created with Python, openCV, and
+                            Pygame</p>
+                        <iframe class="post-video" src="https://www.youtube.com/embed/81mEMX0Xs5s?si=3e-aWBZo2Bgcd2eh"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="post" style="width: 40%;">
+                        ul.Explaination
+                    </div>
                 </div>
-                <div class="post">
-                        
+                <div class="rows" >
+                    <div class="post">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+                    <div class="post">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+                    <div class="post">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
                 </div>
+
             </div>
         </div>
 
     </div>
 </body>
+
 </html>

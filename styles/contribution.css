@@ -22,36 +22,43 @@
     display: block;
 }
 .Contributions{
-    width: 100%;
+    width: 94%;
 }
 .projects{
     width: 100%;
-    display: flex;
+    display: block;
+}
+.rows{
+    width: 100%;
+}
+@media screen and (min-width: 700px){
+    .rows{
+        display: flex;
+    }
+    .post{
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+}
+@media (max-width: 700px) {
+    .rows{
+        display: block;
+    }
+    .post{
+        width:fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 .post{
-    margin-left: 2%;
-    margin-right: 2%;
     margin-bottom: 5px;
     background-color: #fff;
     margin-top: 20px;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 2px 2px 2px;
-    height: fit-content;
 }
-@media (max-width: 1000px){
-    .post{
-        width: 44%
-    }
-}
-@media (min-width: 900px){
-    .post{
-        width: 33%
-    }
-}
-.post-video{
-    width: 100%;
-    height: 315px;
-    margin-left: auto;
-    margin-right: center;
+
+.post-title{
+    text-align: center;
 }
