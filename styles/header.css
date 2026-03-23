@@ -1,45 +1,162 @@
-.header{
-    background-color: #f8f9fa;
-    padding: 20px;
-    padding-bottom: 50px;
-    padding-top: 50px;
+/* ============================================================
+   C++ CODE PATTERN — tiled SVG on the body background
+   ============================================================ */
+body {
+    /* The SVG tile is a 520×340 block with ~8 staggered code lines.
+       It repeats seamlessly in both axes across the entire page.    */
+    background-color: var(--bg, #0c1220);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='340'%3E%3Cstyle%3Etext%7Bfont-family:'IBM Plex Mono',monospace;font-size:11px;fill:%2300c8ff;fill-opacity:.4%7D%3C/style%3E%3Ctext x='10'  y='28' %3E%23include %26lt%3Bvector%26gt%3B%3C/text%3E%3Ctext x='210' y='28' fill='%23a78bfa' fill-opacity='.065'%3Etemplate%26lt%3Btypename T%26gt%3B%3C/text%3E%3Ctext x='10'  y='58' %3Econstexpr int sq(int n) %7B return n*n%3B %7D%3C/text%3E%3Ctext x='270' y='72' fill='%23a78bfa' fill-opacity='.065'%3Estd%3A%3Aunique_ptr%26lt%3Bint%26gt%3B p%3C/text%3E%3Ctext x='10'  y='100'%3Estd%3A%3Aranges%3A%3Asort(v)%3B%3C/text%3E%3Ctext x='230' y='110'%3Eauto x %3D static_cast%26lt%3Bint%26gt%3B(y)%3B%3C/text%3E%3Ctext x='10'  y='138'%3Efor (auto%26amp%3B e : v) %7B %7D%3C/text%3E%3Ctext x='250' y='148' fill='%23a78bfa' fill-opacity='.065'%3E%2F%2F FIXME%3A page fault%3C/text%3E%3Ctext x='10'  y='172'%3Estd%3A%3Avector%26lt%3Bint%26gt%3B v %3D %7B1%2C2%2C3%7D%3B%3C/text%3E%3Ctext x='10'  y='202'%3E%23define PAGE_SIZE 4096%3C/text%3E%3Ctext x='240' y='202' fill='%23a78bfa' fill-opacity='.12'%3Estd%3A%3Amove(obj)%3C/text%3E%3Ctext x='10'  y='232'%3Eint x %3D 10%3B%3C/text%3E%3Ctext x='130' y='232'%3Euint32_t flags %3D 0xFF%3B%3C/text%3E%3Ctext x='10'  y='262'%3Estd%3A%3Acout %26lt%3B%26lt%3B %22hello%5Cn%22%3B%3C/text%3E%3Ctext x='240' y='272' fill='%23a78bfa' fill-opacity='.065'%3Enamespace os %7B %7D%3C/text%3E%3Ctext x='10'  y='296'%3E%23include %26lt%3Biostream%26gt%3B%3C/text%3E%3Ctext x='240' y='306'%3Esize_t n %3D sizeof(int)%3B%3C/text%3E%3Ctext x='10'  y='328' fill='%23a78bfa' fill-opacity='.065'%3Eclass Kernel %7B virtual void run() %3D 0%3B %7D%3B%3C/text%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 520px 340px;
+}
+
+/* Lift all real content above the pattern */
+.header,
+.contents {
+    position: relative;
+    z-index: 1;
+}
+
+/* ============================================================
+   DESIGN TOKENS
+   ============================================================ */
+:root {
+    --bg:        #0c1220;
+    --surface:   #142035;
+    --surface-2: #1b2d47;
+    --accent:    #00c8ff;
+    --accent-2:  #a78bfa;
+    --text:      #e2e8f0;
+    --muted:     #6b8cad;
+    --border:    rgba(0, 200, 255, 0.15);
+    --shadow:    0 8px 32px rgba(0, 0, 0, 0.45);
+    --font-head: 'Syne', sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+    --radius:    12px;
+}
+
+/* ============================================================
+   BASE
+   ============================================================ */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-head);
+    background-color: var(--bg);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.header {
+    position: relative;
+    padding: 90px 20px 80px;
     text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    display: block;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
     background-image: url("../images/bg3.png");
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 100% ;
+    background-size: cover;
+    overflow: hidden;
 }
 
-.div-header-text{
+/* Dark overlay so text stays readable over any background image */
+.header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(10, 16, 28, 0.88) 0%,
+        rgba(0, 80, 120, 0.45) 100%
+    );
+    z-index: 0;
+}
+
+/* Subtle glow dot in the background */
+.header::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 300px;
+    background: radial-gradient(ellipse, rgba(0, 200, 255, 0.12) 0%, transparent 70%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.header-title {
+    position: relative;
+    z-index: 1;
+}
+
+.div-header-text {
+    font-family: var(--font-head);
     color: #fff;
-    font-family: Arial, sans-serif;
-}
-body{
     margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #aaaaaae1;
+    line-height: 1.2;
 }
-.intro{
-    background-color: #fff;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 7px;
-    box-shadow: 3px 2px 4px rgba(0, 0, 0, 1);
-    width: 92%;
-    margin-left: auto;
-    margin-right: auto;
+
+/* "Welcome to" line */
+.div-header-text:first-child {
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    opacity: 0.55;
+    margin-bottom: 12px;
 }
-@media (min-width: 900px){
-    .intro{
+
+/* "Dyno's website!" line */
+.div-header-text:last-child {
+    font-size: clamp(2.4rem, 6vw, 4rem);
+    font-weight: 800;
+    text-shadow: 0 0 40px rgba(0, 200, 255, 0.35);
+}
+
+/* ============================================================
+   PAGE WRAPPER
+   ============================================================ */
+.contents {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* ============================================================
+   CARD BASE  (intro shares this shell)
+   ============================================================ */
+.intro {
+    background-color: var(--surface);
+    padding: 32px 36px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    width: 100%;
+    animation: fadeUp 0.5s ease both;
+}
+
+.intro:nth-child(2) { animation-delay: 0.1s; }
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0);    }
+}
+
+@media (min-width: 900px) {
+    .intro {
         text-align: center;
-        font-display:inherit;
-        
     }
 }
