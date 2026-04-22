@@ -1,0 +1,74 @@
+.site-footer {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 52px 24px 36px;
+    border-top: 1px solid var(--border);
+    margin-top: 12px;
+    background-color: var(--surface);
+}
+
+.footer-name {
+    font-family: var(--font-head);
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text);
+    margin: 0 0 6px;
+    letter-spacing: 0.02em;
+}
+
+.footer-tagline {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    margin: 0 0 32px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 36px;
+}
+
+.footer-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 10px 20px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--muted);
+    text-decoration: none;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    transition: color 0.2s, border-color 0.2s, background 0.2s, transform 0.15s;
+}
+
+.footer-link:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: rgba(0, 200, 255, 0.06);
+    transform: translateY(-2px);
+}
+
+.footer-icon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+.footer-link-label {
+    white-space: nowrap;
+}
+
+.footer-copy {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--muted);
+    opacity: 0.5;
+    margin: 0;
+    letter-spacing: 0.05em;
+}

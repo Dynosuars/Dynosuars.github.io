@@ -118,7 +118,7 @@
     font-family: var(--font-mono);
     font-size: 0.85rem;
     font-weight: 400;
-    color: var(--muted);
+    color: #00ee00;
     margin-bottom: 14px;
     letter-spacing: 0.05em;
 }
@@ -279,7 +279,7 @@
 }
 
 /* ============================================================
-   LATEST PROJECTS (information section)
+   Future PROJECTS (information section)
    ============================================================ */
 .information {
     background: var(--surface);
