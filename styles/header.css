@@ -160,3 +160,32 @@ body {
         text-align: center;
     }
 }
+
+.navbar-icon{
+    margin-left: 5px;
+}
+
+.nav-item-active{
+    color: white;
+    font-size: 20px;
+}
+
+.nav-item-active a{
+    color: white;
+    font-size: 25px;
+    font-weight: 300;
+    margin-right: 10px;
+    font-family: var(--font-head);
+}
+
+.nav-item-active a:hover{
+    color: var(--accent);
+    font-size:25px;
+}
+
+.nav-bg{
+    background-color: var(--bg);
+    border-bottom-left-radius: var(--radius);
+    border-bottom-right-radius: var(--radius);
+    box-shadow: rgba(255, 255, 255, 0.2) 1px 1px 2px;
+}

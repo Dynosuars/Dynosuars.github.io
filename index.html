@@ -22,7 +22,7 @@
     <link href="styles/footer.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-
+    <!--NAV BAR-->
     <!--HEADER-->
     <div class="header">
         <div class="header-title">
@@ -31,10 +31,31 @@
         </div>
     </div>
 
-    <!--MAIN-->
+    <nav class="navbar navbar-expand-sm navbar-dark nav-bg sticky-top">
+    <div class="container-fluid">
+        <img src="images/C_Logo.png", class="navbar-brand logo" alt="Logo" width="50px">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mynavbar">
+        <ul class="navbar-nav" style="margin-left: auto;">
+            <li class="nav-item nav-item-active">
+            <a class="nav-link" href="#academic">Academic</a>
+            </li>
+            <li class="nav-item nav-item-active">
+            <a class="nav-link" href="#experience">Experience</a>
+            </li>
+            <li class="nav-item nav-item-active">
+            <a class="nav-link" href="#projects">Projects</a>
+            </li>
+        </ul>
+        </div>
+    </div>
+    </nav>
+
     <div class="contents">
 
-        <!-- About Me -->
+        <!-- About Me like what else -->
         <div class="intro">
             <h2 class="Aboutme">About Me!</h2>
 
@@ -67,7 +88,7 @@
 
         <!-- Education -->
         <div class="intro">
-            <h3 class="education-title">Education</h3>
+            <h3 class="education-title" id="academic">Education</h3>
             <div class="education-card">
                 <h4 class="education-subtitle">John Dewey High School—Junior Year</h4>
                 <p class="education-detail">
@@ -78,10 +99,20 @@
                 
                 </p>
             </div>
+
+            <h3 class="education-title" style="margin-top: 32px;">Visit my education page!</h3>
+            <div class="education-card">
+                <a href="education.html" class="github-link-link">
+                    <button class="link-button" id="github-btn">
+                        <img src="images/whitegithub.png" class="github-link-logo" id="giticon" alt="GitHub logo">
+                        <p class="link-button-text">Click here to redirect to Github!</p>
+                    </button>
+                </a>
+            </div>
         </div>
 
         <!-- Experiences + Upcoming -->
-        <div class="Contributions">
+        <div class="Contributions" id="experience">
             <div class="Contributions-header">
                 <h2>Projects</h2>
             </div>
@@ -173,7 +204,7 @@
                 </div>
             </div>
 
-            <div class="Contributions-header information" style="margin-top: 32px;">
+            <div class="Contributions-header information" style="margin-top: 32px;" id="projects">
                 <h2>Upcoming</h2>
                 <div class="row g-3">
                 <div class="col-12 col-md-6">

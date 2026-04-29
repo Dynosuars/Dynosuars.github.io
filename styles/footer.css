@@ -20,7 +20,7 @@
 .footer-tagline {
     font-family: var(--font-mono);
     font-size: 0.75rem;
-    color: var(--muted);
+    color: #00ee00;
     letter-spacing: 0.08em;
     margin: 0 0 32px;
 }
