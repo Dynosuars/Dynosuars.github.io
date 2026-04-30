@@ -217,7 +217,7 @@
 
                 <div class="work" id="work-UAlbany" onclick="openModal('work-UAlbany-modal')">
                     <h2>My UAlbany work with Mr.Sands</h2>
-                    <h3> Java programs • 2025-2026</h3>
+                    <h3> ICSI 201 • 2025-2026</h3>
                     <p>Nothing much, just UAlbany works or rather projects that I choose to make harder for myself and easier for the user</p>
                     <div class="work-tags">
                         <span class="work-tag">Java</span>
@@ -262,16 +262,18 @@
         <div class="modal-content">
             <button class="close-btn" onclick="closeModal('work-UAlbany-modal')">&times;</button>
             <h2>UAlbany Projects</h2>
-            <img src="images/UAlbany/Group%20photo.jpg" alt="UAlbany" class="modal-image">
+            <img src="images/UAlbany-Showcase.webp" alt="UAlbany" class="modal-image">
             <div class="modal-body">
                 <h3>Work Overview</h3>
                 <p> Class works from my UlAlbany class with Mr.Sands. These works are mostly Java based projects.
                 <h3>Accomplishments</h3>
                 <ul>
-                    <li>Make myself hate Java even more?!?</li>
+                    <li>Understand OOP foundation even further</li>
+                    <li>Introduce me JavaFX</li>
                 </ul>
-                <a href="https://github.com/Dynosuars" class="modal-link-btn">Learn More About This Initiative →</a>
+                <a href="https://github.com/dynosuars/UAlbany-Showcase/tree/main" class="modal-link-btn">See the codes on Github! →</a>
             </div>
+        </div>
     </div>
 
     <div id="work-cny-modal" class="modal">
@@ -336,6 +338,7 @@
         // Modal functionality
         function openModal(modalId) {
             let modal = document.getElementById(modalId);
+            console.log(modal)
             if (modal) {
                 modal.classList.add('show');
                 document.body.style.overflow = 'hidden';
