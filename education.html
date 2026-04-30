@@ -86,7 +86,7 @@
                 </div>
 
                 <div class="class">
-                    <h2>Digital Art</h2>
+                    <h2>Computer/Digital Art</h2>
                     <h3>Teacher/Educator(s): Mrs.Simonsen -> Mr.Mak</h3>
                     <p>Introducing me to former inconceivable subject ART! Essentially developed my sense of artistic
                         taste and creation through digital tools such as Photoshop</p>
@@ -123,6 +123,25 @@
                         <a href="#" class="work-link">Related projects: Visit on Github →</a>
                     </div>
                 </div>
+                <div class="class">
+                    <h2>English 12</h2>
+                    <h3>Teacher/Educator: Mr.Cataldo</h3>
+                    <p> In English 12, I developed advanced skills: critical analysis, standard English convention, and
+                        effective communication. Through diverse literature, I honed my ability to analyze complex
+                        texts, write with clarity and precision, and engage in thoughtful discussions. This course
+                        enhanced my proficiency in interpreting literature and expressing ideas effectively.
+                    </p>
+                    <div class="class-meta">
+                        <div class="class-meta-item">
+                            <span class="class-meta-label">Institution:</span>
+                            <span>John Dewey High School</span>
+                        </div>
+                        <div class="class-meta-item">
+                            <span class="class-meta-label">Grade:</span>
+                            <span>92.4%</span>
+                        </div>
+                    </div>
+                </div>
 
 
 
@@ -137,13 +156,13 @@
 
         <!-- WORK SECTION -->
         <div class="intro education-section" id="work">
-            <h2 class="section-title">Work & Projects (Click on them for more details) // Not added yet</h2>
+            <h2 class="section-title">Work & Projects</h2>
 
             <div class="work-container">
                 <!-- Example Work 1 -->
-                <div class="work" id="work-estuary">
-                    <h2>Estuary Day - International Coastal Clean Up</h2>
-                    <h3> Environmental Volunteer • 2026</h3>
+                <div class="work" id="work-estuary" onclick="openModal('work-estuary-modal')">
+                    <h2>It's My Estuary Day - International Coastal Clean Up</h2>
+                    <h3> Environmental Volunteer • 2024-2026</h3>
                     <p>Participated in large-scale coastal cleanup initiative focusing on environmental
                         conservation. Coordinated with teams to remove marine debris and promote sustainable
                         practices. Documented efforts and impact on local ecosystems.</p>
@@ -155,7 +174,7 @@
                 </div>
 
                 <!-- Example Work 2 -->
-                <div class="work" id="work-cny">
+                <div class="work" id="work-cny" onclick="openModal('work-cny-modal')">
                     <h2>JDHS Chinese New Year 2026</h2>
                     <h3> Audio manager & MMD performer! • 2026</h3>
                     <p>Led all musical arrangements and technical coordination for school's annual Chinese New
@@ -170,8 +189,7 @@
                     </div>
                 </div>
 
-                <!-- Example Work 3 -->
-                <div class="work" id="work-badapple">
+                <div class="work" id="work-badapple" onclick="openModal('work-badapple-modal')">
                     <h2>Bad Apple ASCII Recreation</h2>
                     <h3>Chinese New Year • 2025</h3>
                     <p>Developed innovative ASCII art animation of "Bad Apple" music video using Pygame.
@@ -184,10 +202,93 @@
                         <span class="work-tag">Video Processing</span>
                     </div>
                 </div>
+                <a href="https://docs.google.com/document/d/1nK3kKUY_kTYcT_uEw8DEF_nPlK5OIMG3yRQElVizwkU/edit?usp=sharing" style="text-decoration: none;">
+                    <div class="work" id="work-estuary" href="https://docs.google.com/document/d/1nK3kKUY_kTYcT_uEw8DEF_nPlK5OIMG3yRQElVizwkU/edit?usp=sharing">
+                        <h2>Literary Essay • Lucid dream of The Great Gatsby</h2>
+                        <h3> English 12 • 2026</h3>
+                        <p>Wrote a literary analysis essay exploring the themes of American Dream and class conflict. <br>Click to see!</p>
+                        <div class="work-tags">
+                            <span class="work-tag">Essay</span>
+                            <span class="work-tag">The Great Gatsby</span>
+                            <span class="work-tag">Literacy</span>
+                        </div>
+                    </div>
+                </a>
             </div>
 
             <div class="section-redirect">
                 <p><a href="#classes" class="redirect-link">← Back to classes</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODALS -->
+    <!-- Work Modals -->
+    <div id="work-estuary-modal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('work-estuary-modal')">&times;</button>
+            <h2>It's My Estuary Day - International Coastal Clean Up</h2>
+            <img src="images/Beach%20Clean%20Up/Group%20photo.jpg" alt="Estuary Day" class="modal-image">
+            <div class="modal-body">
+                <h3>Event Overview</h3>
+                <p>An half-a-year event focus on environmental conservation and marine ecosystem protection showcasing technology develop by our Robotics Team!
+                    This event involved coordinated cleanup efforts, removal of marine debris, and documentation of environmental impact. Volunteers worked together to promote sustainable practices and raise awareness about the importance of preserving our coastal ecosystems.
+                </p>
+                <h3>Accomplishments</h3>
+                <ul>
+                    <li>Coordinated cleanup attendance count for <span class="animated-blue">345</span> volunteers using a digital recording system based in Python Flask!</li>
+                    <li>Promoted environmental awareness</li>
+                    <li>Promoted communication and collobartion among volunteers</li>
+                    <li>Raise community awareness of their environmental impact---emphasizing that change happens when we come together.</li>
+                </ul>
+                <a href="https://github.com/Dynosuars" class="modal-link-btn">Learn More About This Initiative →</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="work-cny-modal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('work-cny-modal')">&times;</button>
+            <h2>JDHS Chinese New Year 2026</h2>
+            <img src="images/CNY2026/Friends.jpg" alt="Chinese New Year 2026" class="modal-image">
+            <div class="modal-body">
+                <h3>Event Overview</h3> 
+                <p>Served as Audio Manager and MMD (Miku Miku Dance) performer for the school's annual Chinese New Year
+                    celebration. Managed all audio equipment, coordinated with performers, and created animated
+                    performances that enhanced the cultural celebration.</p>
+                <h3>Key Responsibilities</h3>
+                <ul>
+                    <li>Managed audio systems and sound quality</li>
+                    <li>Coordinated with performance groups</li>
+                    <li>Directed MMD animation performances</li>
+                    <li>Ensured seamless technical execution</li>
+                    <li>Ensured seamless communication with other performers and host regarding sounds</li>
+                </ul>
+                <a href="https://www.youtube.com/embed/_FTe41euCq0?si=Oy99AvRfROaLnPKr" class="modal-link-btn">Watch
+                    Performance Video →</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="work-badapple-modal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('work-badapple-modal')">&times;</button>
+            <h2>Bad Apple ASCII Recreation</h2>
+            <img src="images/Touhou.png" alt="Bad Apple ASCII" class="modal-image">
+            <div class="modal-body">
+                <h3>Project Overview</h3>
+                <p>As a Touhou fan, also a enjoyer of The Touhou Project---A cluster of games and Nerds---I must show my support for MY game.
+                   Thus, I developed a ASCII based recreation of the iconic "Bad Apple" music video using Python libraries such as: Pillow to trace the video frames, Pygame to output music AND the video by frame.
+                </p>
+                <h3>Technical Implementation</h3>
+                <ul>
+                    <li>Video frame extraction based on value and ascii</li>
+                    <li>Real-time ASCII character mapping</li>
+                    <li>Audio synchronization</li>
+                    <li>Performance optimization for thousands of characters per frame</li>
+                    <li>Originally a console application but expanded to a graphical interface for many reasons</li>
+                </ul>
+                <a href="https://www.youtube.com/embed/81mEMX0Xs5s?si=3e-aWBZo2Bgcd2eh" class="modal-link-btn">Watch the live record →</a>
             </div>
         </div>
     </div>
@@ -202,6 +303,44 @@
         </div>
         <p class="footer-copy">🤫🧏🏻‍♂️ 2026. Built with the goal of replacing C++. 🤫🧏‍♂️</p>
     </div>
+
+    <script>
+        // Modal functionality
+        function openModal(modalId) {
+            let modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Close modal when clicking outside the modal content
+        window.onclick = function (event) {
+            if (event.target.classList.contains('modal')) {
+                const modalId = event.target.id;
+                closeModal(modalId);
+            }
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') {
+                const modals = document.querySelectorAll('.modal.show');
+                modals.forEach(modal => {
+                    modal.classList.remove('show');
+                });
+                document.body.style.overflow = 'auto';
+            }
+        });
+    </script>
 </body>
 
 </html>

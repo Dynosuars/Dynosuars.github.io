@@ -18,8 +18,8 @@
     <link href="styles/header.css" rel="stylesheet" type="text/css">
     <link href="styles/intro.css" rel="stylesheet" type="text/css">
     <link href="styles/special.css" rel="stylesheet" type="text/css">
-    <link href="styles/future.css" rel="stylesheet" type="text/css">
     <link href="styles/footer.css" rel="stylesheet" type="text/css">
+    <link href="styles/future.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <!--NAV BAR-->
@@ -102,12 +102,8 @@
 
             <h3 class="education-title" style="margin-top: 32px;">Visit my education page!</h3>
             <div class="education-card">
-                <a href="education.html" class="github-link-link">
-                    <button class="link-button" id="github-btn">
-                        <img src="images/whitegithub.png" class="github-link-logo" id="giticon" alt="GitHub logo">
-                        <p class="link-button-text">Click here to redirect to Github!</p>
-                    </button>
-                </a>
+                <!-- Make this centered -->
+                <a href="education.html" class="btn-redirection">Click here to redirect to my education page!</a>
             </div>
         </div>
 
@@ -227,14 +223,23 @@
         </div>
 
         <!-- Future Projects -->
-        <div class="information">
+        <div class="information" id="project">
             <h2>Future </h2>
+
             <div class="future-projects">
                 <div class="project-card">
                     <h5>Desktop AI</h5>
                     <p>My goal is to create a desktop AI that can interact with the user and call functions. It will be designed to run on limited computational resources, making it accessible to a wide range of users.</p>
                     <button class="btn btn-secondary btn-sm" disabled>In Development</button>
-                    <p class="comment">// Far future project</p>
+                        <p class="comment">// Far future project</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h5>Sigma OS</h5>
+                    <p>I am developing a Unix operating system customized by on my preference. It will be designed to be user-friendly and efficient, with a focus on security and privacy.</p>
+                    <button class="btn btn-secondary btn-sm" disabled>In Development</button>
+                        <p class="comment">// Ultra far future project</p>
+                    </div>
                 </div>
             </div>
         </div>

@@ -2,7 +2,17 @@
         font-family: var(--font-mono);
         font-size: 0.85rem;
         font-weight: 400;
-        color: var(--muted);
+        color: #00ee00;
         margin-top: 12px;
         letter-spacing: 0.05em;
+}
+
+.project-card{
+        background-color: var(--surface-2);
+        padding: 20px;
+        border-radius: 10px;
+        border: 1px solid var(--border);
+        border-left: var(--accent) solid 10px;
+        width: 100%;
+        margin-bottom: 20px;
 }

@@ -120,13 +120,13 @@
 .class {
     background: var(--surface);
     border: 1px solid var(--border);
-    border-left: 4px solid var(--accent);
+    border-left: 10px solid var(--accent);
     border-radius: var(--radius);
     padding: 24px;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
-    height:fit-content;
+    height: fit-content;
 }
 
 .class::before {
@@ -255,16 +255,19 @@
 
 .work {
     background: var(--surface);
-    border-left: 4px solid var(--accent);
+    border-left: 10px solid var(--accent);
     padding: 20px;
     border-radius: 4px;
+    border-color: var(--border);
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .work:hover {
     background: var(--surface-2);
-    box-shadow: 0 4px 16px rgba(0, 200, 255, 0.08);
+    box-shadow: 0 6px 20px rgba(0, 200, 255, 0.15);
     border-left-color: var(--accent-2);
+    transform: translateY(-2px);
 }
 
 .work h2 {
@@ -475,4 +478,178 @@
     font-family: var(--font-mono);
     font-size: 0.95rem;
     letter-spacing: 0.05em;
+}
+
+/* ============================================================
+   MODAL STYLES
+   ============================================================ */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.modal.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 40px;
+    max-width: 700px;
+    max-height: 85vh;
+    overflow-y: auto;
+    position: relative;
+    animation: slideUp 0.3s ease;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-content h2 {
+    font-family: var(--font-head);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin: 0 0 20px 0;
+    padding: 0;
+}
+
+.modal-content h3 {
+    font-family: var(--font-head);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text);
+    margin: 20px 0 12px 0;
+    padding: 0;
+}
+
+.modal-content p {
+    font-family: var(--font-head);
+    font-size: 0.95rem;
+    color: var(--text);
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+}
+
+.modal-content ul {
+    font-family: var(--font-head);
+    font-size: 0.95rem;
+    color: var(--text);
+    line-height: 1.8;
+    margin: 12px 0 0 20px;
+    padding: 0;
+}
+
+.modal-content li {
+    margin: 8px 0;
+}
+
+.modal-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    margin: 20px 0;
+    border: 1px solid var(--border);
+}
+
+.modal-body {
+    margin-top: 20px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--muted);
+    cursor: pointer;
+    transition: color 0.2s ease;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-btn:hover {
+    color: var(--accent);
+}
+
+.modal-link-btn {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--bg);
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 20px;
+    transition: all 0.2s ease;
+}
+
+.modal-link-btn:hover {
+    background: var(--accent-2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 200, 255, 0.3);
+}
+
+/* Scrollbar styling for modal */
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: var(--surface-2);
+    border-radius: var(--radius);
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: var(--radius);
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-2);
 }

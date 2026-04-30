@@ -203,14 +203,29 @@
     margin: 0;
 }
 .btn-redirection {
-    display: inline-block;
+    display: block;
     padding: 10px 20px;
-    background-color: var(--accent);
+    background-color: var(); /* Blank */
     color: white;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    border: var(--accent) 2px solid;
+    border-radius: 5px;
+    color: var(--accent);
+    font-family: "Hack";
+
+    box-shadow: #fff 1px 2px 0px;
 }
+
+.btn-redirection:hover {
+    background-color: var(--accent);
+    color: #fff;
+}
+
 
 /* Experience */
 .Contributions {
